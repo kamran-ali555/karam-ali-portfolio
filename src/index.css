@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  @apply bg-gray-900 text-white font-sans;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-primary-600 to-secondary-600 animate-gradient-x;
+}
+
+.card {
+  @apply bg-white/10 backdrop-blur-lg rounded-xl p-6 shadow-lg border border-white/10 hover:border-white/20 transition-all duration-300;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-lg hover:shadow-primary-500/20 hover:shadow-xl;
+}
+
+.btn-outline {
+  @apply border border-white/20 hover:bg-white/10 hover:border-white/40;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400;
+}
